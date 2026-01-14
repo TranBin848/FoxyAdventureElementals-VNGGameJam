@@ -24,6 +24,8 @@ The world of FoxyAdventure: Elementals is driven by elemental interactions:
 
 Combat combines real-time action with elemental strategy, rewarding players who understand and exploit the elemental relationships.
 
+![image alt](https://github.com/UITtranbin848/image_vng/blob/main/screenshot_env.png?raw=true)
+
 ---
 
 ## 📜 Skill System
@@ -50,12 +52,16 @@ Players use collected scrolls to:
 
 This system allows long-term progression even when restarting or continuing the story.
 
+![image alt](https://github.com/UITtranbin848/image_vng/blob/main/screenshot_skilltree.png?raw=true)
+
 ---
 
 ## 👹 Bosses
 
 The game includes **3 major bosses**, each representing powerful elemental forces.  
 One of them is Foxy’s corrupted alter ego, making the final battle both mechanical and narrative-driven.
+
+![image alt](https://github.com/UITtranbin848/image_vng/blob/main/screenshot_boss.png?raw=true)
 
 ---
 
@@ -71,12 +77,6 @@ One of them is Foxy’s corrupted alter ego, making the final battle both mechan
 ## 🎓 Project Context
 
 This game was developed as a **course project** organized by **VNG** and **UIT**, focusing on game design, gameplay systems, and full-cycle game development using Godot.
-
----
-
-## 📷 Screenshots & Gameplay
-
-(Add screenshots, GIFs, or gameplay videos here)
 
 ---
 
