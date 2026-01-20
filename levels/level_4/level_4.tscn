@@ -110,29 +110,6 @@ fill_from = Vector2(0.5, 0.5)
 [node name="Stage" type="Node2D"]
 script = ExtResource("1_36jj7")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
-position = Vector2(4092, -516)
-rotation = 0.349066
-shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 10.0
-
-[node name="DirectionalLight2D2" type="DirectionalLight2D" parent="."]
-visible = false
-position = Vector2(4092, -516)
-rotation = -0.349066
-shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 10.0
-
-[node name="DirectionalLight2D3" type="DirectionalLight2D" parent="."]
-position = Vector2(4092, -516)
-shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 10.0
-max_distance = 16384.0
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(19, -330)
 color = Color(0, 0, 0, 1)
@@ -182,7 +159,7 @@ texture = ExtResource("16_s6hm0")
 position = Vector2(-12, 5)
 
 [node name="Player" parent="." instance=ExtResource("2_tu7ib")]
-position = Vector2(22, 10)
+position = Vector2(-10, 2)
 max_health = 1000
 
 [node name="LightSource" type="Node2D" parent="Player"]
@@ -192,7 +169,6 @@ animation_duration = 2.0
 [node name="ShadowCastPointLight2D" type="PointLight2D" parent="Player/LightSource"]
 position = Vector2(3, -17)
 shadow_enabled = true
-shadow_filter = 2
 shadow_filter_smooth = 2.0
 texture = SubResource("GradientTexture2D_s6hm0")
 texture_scale = 5.0
@@ -447,21 +423,13 @@ script = ExtResource("31_ac2k2")
 animation_duration = 2.0
 is_on = false
 
-[node name="ShadowCastPointLight2D" type="PointLight2D" parent="BossZoneArea2D/LightSource2"]
-position = Vector2(3, -17)
-shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 2.0
-texture = SubResource("GradientTexture2D_5qnna")
-texture_scale = 5.0
-
 [node name="AreaPointLight2D" type="PointLight2D" parent="BossZoneArea2D/LightSource2"]
 position = Vector2(3, -17)
 energy = 2.0
 shadow_filter = 2
 shadow_filter_smooth = 2.0
 texture = SubResource("GradientTexture2D_5qnna")
-texture_scale = 5.0
+texture_scale = 10.0
 
 [node name="LightSource3" type="Node2D" parent="."]
 position = Vector2(8124, 864)

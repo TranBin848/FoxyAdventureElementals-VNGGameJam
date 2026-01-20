@@ -1,8 +1,9 @@
-[gd_scene load_steps=47 format=3 uid="uid://bmqknea8bh0ev"]
+[gd_scene load_steps=48 format=3 uid="uid://bmqknea8bh0ev"]
 
 [ext_resource type="Texture2D" uid="uid://x0wewx23js2a" path="res://assets/terrain_plus/Animated Sprites/Campfire sheet.png" id="1_sxqdn"]
 [ext_resource type="Script" uid="uid://v2g78x4akfgj" path="res://scripts/light/flickering_light.gd" id="2_g2bal"]
 [ext_resource type="AudioStream" uid="uid://dfv8niucs75pj" path="res://assets/sounds/65795__juskiddink__bonfire.wav" id="2_ndnc0"]
+[ext_resource type="Script" uid="uid://8tc78pwkngf5" path="res://scripts/optimization/ScreenCuller.gd" id="4_ot4qp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2bal"]
 atlas = ExtResource("1_sxqdn")
@@ -314,25 +315,17 @@ bus = &"Ambience SFX"
 
 [node name="LightSource" type="Node2D" parent="."]
 
-[node name="AreaPointLight2D" type="PointLight2D" parent="LightSource"]
-position = Vector2(3, -17)
-color = Color(0.782505, 0.322668, 0, 1)
-energy = 0.5
-shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 2.0
-texture = SubResource("GradientTexture2D_s6hm0")
-texture_scale = 5.0
-script = ExtResource("2_g2bal")
-size_variation = 0.2
-
 [node name="ShadowCastPointLight2D" type="PointLight2D" parent="LightSource"]
 position = Vector2(3, -17)
 color = Color(0.784314, 0.321569, 0, 1)
-energy = 0.5
 shadow_filter = 2
 shadow_filter_smooth = 2.0
 texture = SubResource("GradientTexture2D_s6hm0")
 texture_scale = 5.0
 script = ExtResource("2_g2bal")
 energy_variation = 0.1
+
+[node name="ScreenCuller" type="VisibleOnScreenEnabler2D" parent="." node_paths=PackedStringArray("visuals_node")]
+script = ExtResource("4_ot4qp")
+visuals_node = NodePath("../LightSource")
+metadata/_custom_type_script = "uid://8tc78pwkngf5"

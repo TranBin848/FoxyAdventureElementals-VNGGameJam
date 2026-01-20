@@ -36,8 +36,8 @@ void fragment() {
 
 		vec2 refelected_uv = vec2(SCREEN_UV.x, SCREEN_UV.y - (uv_height * UV.y * scale_y * y_zoom));
 		vec4 refelection = texture(SCREEN_TEXTURE, refelected_uv);
-		vec4 waves = texture(SCREEN_TEXTURE, refelected_uv + noise * y_zoom * (wave_strength / 100.0));
-
+		// textureLod forces it to read from Mipmap Level 0.0 (High Res)
+		vec4 waves = textureLod(SCREEN_TEXTURE, refelected_uv + noise * y_zoom * (wave_strength / 100.0), 0.0);
 		COLOR = waves + CAST_COLOR;
 	}
 }
